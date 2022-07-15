@@ -1,0 +1,19 @@
+#Textoprincipal{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    background-color: grey;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.Fundovermelho{
+    background-color: red;
+}
+
+.negrito{
+    font-weight: bold;
+}
