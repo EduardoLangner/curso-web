@@ -1,0 +1,108 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li>
+        <span folder>backend</span>
+        <ul>
+            <li>
+                <span folder>app</span> 
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span folder>config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    <li>
+        <span folder>frontend</span>
+        <ul>
+            <li>
+                <span folder>public</span>
+                <ul>
+                    <li>app.js</li>
+                    <li>app.css</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => {   
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d == 'none' ? 'block' : 'none' //operador ternário 
+        }
+    })
+</script>
+
+<!--
+    .tree * {
+    list-style-type: none;
+}
+
+.tree li a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.tree ul {
+    padding-left: 25px;
+}
+
+ul.tree, .tree li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.tree, ul.tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} 
+
+ul.tree ul {
+    margin-left: 10px;
+}
+
+ul.tree li {
+    margin: 0;
+    margin: 0 9px;
+    padding: 0 7px;
+    border-left:1px solid rgb(100,100,100);
+
+}
+
+ul.tree li:last-child {
+    border-left:none;
+}
+
+ul.tree li:before {
+    position:relative;
+    top:-0.3em;
+    height:1em;
+    width:12px;
+    color:white;
+    border-bottom:1px solid rgb(100,100,100);
+    content:"";
+    display:inline-block;
+    left:-7px;
+}
+
+ul.tree li:last-child:before {
+    border-left:1px solid rgb(100,100,100);   
+}
+-->
