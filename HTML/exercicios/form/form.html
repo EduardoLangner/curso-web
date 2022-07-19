@@ -1,0 +1,44 @@
+<h1>Formulário</h1>
+
+<form action="http://localhost:3003/usuarios" method="POST">
+
+    <input type="text" name="nome" placeholder="Nome">
+    <input type="text" name="email" placeholder="Email">
+    <textarea name="Sobre" cols="30" rows="10" placeholder="Fale um pouco sobre você"></textarea>
+
+    <div>
+        <input type="radio" name="tipo" value="admin">Admin
+        <input type="radio" name="tipo" value="user">User
+        <input type="radio" name="tipo" value="professor">Professor
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo">Ativo
+    </div>
+
+    <select name="estado">
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+    </select>
+
+    <input type="submit" value="Enviar">
+
+</form>
+
+<style>
+
+    input, textarea {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline-block;
+    }
+</style>
