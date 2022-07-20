@@ -1,6 +1,6 @@
 <h1>Formulário</h1>
 
-<form action="http://localhost:3003/usuarios" method="POST">
+<form method="POST">
 
     <input type="text" name="nome" placeholder="Nome">
     <input type="text" name="email" placeholder="Email">
@@ -17,22 +17,40 @@
     </div>
 
     <select name="estado">
-        <option value="AC">Acre</option>
-        <option value="AL">Alagoas</option>
-        <option value="AP">Amapá</option>
-        <option value="AM">Amazonas</option>
-        <option value="BA">Bahia</option>
-        <option value="CE">Ceará</option>
-        <option value="DF">Distrito Federal</option>
+        <option value="ac">Acre</option>
+        <option value="al">Alagoas</option>
+        <option value="ap">Amapá</option>
+        <option value="am">Amazonas</option>
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceará</option>
+        <option value="df">Distrito Federal</option>
     </select>
 
-    <input type="submit" value="Enviar">
+    <h3>Marque abaixo seus interesses!</h3>
+    <select name="Interesses" multiple size="10">
+
+        <option value="js">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="python">Python</option>
+        <option value="ruby">Ruby</option>
+        <option value="c">C</option>
+        <option value="c++">C++</option>
+        <option value="c#">C#</option>
+        <option value="java">Java</option>
+
+    </select>
+
+    <!-- <input type="submit" formaction="http://localhost:3003/usuarios" value="Enviar"> -->
+    <button formaction="http://localhost:3003/usuarios">Enviar</button> 
+    <!-- <button>Alterar</button> -->
 
 </form>
 
 <style>
 
-    input, textarea {
+    input, textarea, select {
         display: block;
         margin-bottom: 10px;
     }
@@ -41,4 +59,5 @@
     input[type=checkbox] {
         display: inline-block;
     }
+    
 </style>
