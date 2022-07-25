@@ -1,0 +1,53 @@
+<!--
+    autoplay (inicia o vídeo assim que entrar na tela)
+    controls (coloca controles no vídeo) => controlslist="nodownload" (não permite baixar o vídeo)
+-->
+
+<video id="MeuVideo" width="800" height="450">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu navegador não suporta a tag de vídeo
+    <source src="http">
+</video>
+
+<div progresso="MeuVideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button play="MeuVideo" >Play</button>
+    <button pause="MeuVideo">Pause</button>
+</div>
+
+<style>
+    .progresso{
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progresso div{
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<script>
+    function configurarVideo(id){
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+        document.querySelector(`[play=${id}]`).onclick = () => video.play()
+        document.querySelector(`[pause=${id}]`).onclick = () => video.pause()
+        setInterval(() =>{
+            const percentual = (video.currentTime / video.duration) * 100
+            const valorDiv = document.querySelector(`.progresso[progresso=${id}] div`)
+            valorDiv.style.width = `${percentual}%`
+            valorDiv.innerHTML = `${Math.floor(percentual)}%`
+        }, 500)
+    }
+    configurarVideo('MeuVideo')
+</script>
