@@ -1,7 +1,102 @@
-<tag>
-    <p>
-        <p>
-            teste
-        </p>
-    </p>
-</tag>
+<!--
+    ATRIBUTOS
+
+    class=”…“ – Atribui uma classe ao elemento (uma classe pode ser utilizada para um ou mais elementos);
+    id=”…“ – Atribui um id ao elemento (um id deve ser único, ou seja atribuído a um único elemento);
+    style=”…” – Permite incluir elementos CSS (estilos) dentro da tag;
+    lang=”…” – Define o idioma principal do elemento;
+    title=”…” – Define o título do elemento;
+    alt=”…” – Define um texto alternativo e, por isso, é muito utilizado em imagens, auxilia nas práticas de SEO;
+    hidden – Oculta o elemento;
+    align=”…” – Permite definir o padrão de alinhamento desse elemento, como por exemplo: right, center, left e justify;
+    width=”…” – Define uma largura para o elemento;
+    height=”…” – Define uma altura para o elemento.
+
+    ESTRUTURA BÁSICA DE UM DOC HTML
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Título</title>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body>
+            <h1>Título</h1>
+            <p>Texto</p>
+            <img src="img/imagem.jpg" alt="Imagem">
+        </body>
+    </html>
+
+    TAGS ESTRUTURAIS
+
+    <header></header> – Essas tags definem um cabeçalho. Portanto, todo conteúdo que estiver dentro dela faz parte de um cabeçalho, podendo ser utilizado dentro de outras sessões. Não confundir com as tags <head>;
+    <main></main> – Essas tags representam o conteúdo principal do seu corpo, ou seja, o conteúdo relacionado diretamente com o tópico central da página ou com a funcionalidade central da aplicação;
+    <footer></footer> – Essas tags definem um rodapé para a página, geralmente utilizadas no final da página;
+    <section></section> – Essas tags definem uma sessão para sua página;
+    <article></article> – Essas tags definem um artigo da sua página. Nesse sentido, são utilizadas para separar o conteúdo da sua página. Muito utilizado principalmente por blogs ou páginas de conteúdo;
+    <aside></aside> – Essas tags representam uma seção de uma página cujo conteúdo é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo;
+    <nav></nav> – Essa tag define um conteúdo de navegação. Portanto, é muito utilizado em conjunto com listas e na criação de menus;
+    <div></div> – Define uma divisão da página. Desta forma, funciona como um container para conteúdo de fluxo. Uma vez que não possui um valor semântico, é muito utilizado para organizar melhor o conteúdo. 
+
+    TAGS DE TÍTULO
+
+    <h1></h1> – Essa tag define um título de nível 1;
+    <h2></h2> – Essa tag define um título de nível 2;
+    <h3></h3> – Essa tag define um título de nível 3;
+    <h4></h4> – Essa tag define um título de nível 4;
+    <h5></h5> – Essa tag define um título de nível 5;
+    <h6></h6> – Essa tag define um título de nível 6;
+
+    TAGS DE TEXTO
+
+    <p></p> – Principal tag de texto, compõe um parágrafo;
+    <span></span> – Apesar de ter uma funcionalidade e características parecidas com os parágrafos, costumam ser utilizadas apenas para pequenas informações, como legendas de um formulário, legendas de uma imagem, etc. Também pode ser utilizada para formar um container;
+    <pre></pre> – Tag utilizada para representar texto pré-formatado. Muito utilizada para inserir códigos;
+    <b></b> – Transforma o conteúdo em negrito;
+    <i></i> – Transforma o conteúdo em itálico;
+    <br/> – Essa tag não necessita de fechamento, ela executa a função de quebra de linha.
+    <hr/> – Essa tag não necessita de fechamento, ela forma uma linha horizontal.
+    <u></u> – Transforma o conteúdo em sublinhado;
+    <a></a> – Essa tag define um link.
+
+    TAGS DE MULTIMÍDIA
+
+    <img>
+    Essa tag não necessita de fechamento, serve para incluir uma imagem ao seu texto. A partir dessa tag, utilizamos o atributo src=”” onde deve ser digitado o local em que a imagem se encontra. Também é muito utilizado em conjunto com o atributo alt para definir o texto alternativo da imagem.
+    Por exemplo: <img src="imagens/imagem1.jpg" alt="imagem 1 da minha página">
+
+    <video> e <audio>
+    Essa tag serve para indicar a inserção de um vídeo. Com isso, devemos colocar alguns atributos dentro da tag para poder ativar o controle, a principal dela é o controls. 
+    Posteriormente, incluímos a tag <source> com os atributos src e type, onde receberão o local em que está o vídeo e o tipo do vídeo.
+    <video controls> <source src="video.mp4" type="video/mp4"> </video>
+    <audio controls> <source src="musica.ogg" type="audio/ogg"></audio>
+
+    TAGS DE LISTAS
+
+    <ol></ol> - Lista ordenada
+    <ul></ul> - Lista não ordenada 
+    <li></li> - Item da lista
+
+    TAGS DE FORMULÁRIOS
+
+    <form></form> – Essa tag define um formulário. A partir dessa tag, podemos criar um formulário com diversas opções, como o método de envio, o método de validação, etc.
+    <input> – Essa tag define um campo de entrada de dados. A partir dessa tag, podemos criar um campo de entrada de dados com diversas opções, como o tipo de dado, o tamanho do campo, o nome do campo, etc.
+    <input type=”text”> | <input type=”email”> | <input type=”submit” value=”ENVIAR”>
+    <select> – Essa tag define um campo de seleção. A partir dessa tag, podemos criar um campo de seleção com diversas opções, como o nome do campo, etc.
+    <textarea></textarea> – Essa tag define um campo de texto. A partir dessa tag, podemos criar um campo de texto com diversas opções, como o nome do campo, etc.
+    <button></button> – Essa tag define um botão. A partir dessa tag, podemos criar um botão com diversas opções, como o nome do botão, etc.
+    <label></label> – Essa tag define uma legenda. A partir dessa tag, podemos criar uma legenda com diversas opções, como o nome da legenda, etc.
+
+    TAGS DE STYLE E SCRIPT
+    <style></style> – Essa tag define um código CSS. A partir dessa tag, podemos criar um código CSS com diversas opções, como o nome do código, etc.
+    <script></script> – Essa tag define um código JavaScript. A partir dessa tag, podemos criar um código JavaScript com diversas opções, como o nome do código, etc.
+
+    TAGS DE TABELAS
+
+    <table></table> – Essa tag define uma tabela. A partir dessa tag, podemos criar uma tabela com diversas opções, como o nome da tabela, etc.
+    <tr></tr> – Essa tag define uma linha da tabela. A partir dessa tag, podemos criar uma linha da tabela com diversas opções, como o nome da linha, etc.
+    <td></td> – Essa tag define uma célula da tabela. A partir dessa tag, podemos criar uma célula da tabela com diversas opções, como o nome da célula, etc.
+
+-->
