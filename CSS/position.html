@@ -5,7 +5,63 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static { /*deixa estático na página*/
+            top: 100px;
+            left: 100px;
+            background-color: steelblue;
+        }
+
+        .fixed { /*deixa fixado na tela*/
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 { /*deixa estático na página em relação ao anterior*/
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: green;
+        }
+
+        .absolute1 { /*deixa posicionado na página em relação ao viwport*/
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+
+        .absolute2 { /*como está dentro de uma div, esse absolute fica absoluco ao seu objeto pai*/
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky { /*Permite rolar o eleente pela tela porem quando chega no topo deixa fixo como um "menu"*/
+            position: sticky;
+            top: 0px;
+            background-color: lightblue;
+        }
+
     </style>
 </head>
 
