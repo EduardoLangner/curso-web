@@ -6,7 +6,23 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container  div{
+            box-sizing: border-box; /*para que o elemento seja redimensionado*/
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container  div {
+            flex-basis: 100px;
+            flex-direction: column;
+        }
     </style>
 </head>
 
