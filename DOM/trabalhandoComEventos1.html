@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <!-- onclick="navegarEm5s(event)" --> <!--Uma forma de navegar em 5 seguns é chamar a função direto na tag-->
+        <a href="https://google.com.br" >Google</a>
+    </div>
+    <script>
+        function navegarEm5s(event){
+            event.preventDefault() //eu não quero que o evento padrão aconteça
+            console.log('navegando em 5s...')
+            setTimeout(() => {
+                link = event.target
+                window.location.href = link.href //substitui o endereço da página 
+            }, 5000)
+
+        }
+        const a = document.querySelector('a')
+        a.onclick = navegarEm5s //aqui eu estou atribuindo a função navegarEm5s para o evento onclick do elemento a
+    </script>
+</body>
